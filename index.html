@@ -1,7 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tech Tribe Infoways</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        header {
+            background: #123456;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            background: #f2f5f8;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #123456;
+            color: white;
+            padding: 14px 25px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        .services {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1;
+            min-width: 220px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #123456;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
 <header>
-    <img src="logo-transparent.png"
-         alt="Tech Tribe Infoways"
-         width="180">
+
+    <img src="logo.png"
+     alt="Tech Tribe Infoways"
+     width="180">
 
     <nav>
         <a href="#home">Home</a>
@@ -9,4 +100,80 @@
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
+
+<section class="hero" id="home">
+
+    <h2>Professional IT Solutions</h2>
+
+    <p>
+        Reliable IT Infrastructure, Networking and Cyber Security Services
+    </p>
+
+    <a class="button" href="#contact">
+        Contact Us
+    </a>
+
+</section>
+
+<section id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        Tech Tribe Infoways provides professional IT infrastructure,
+        networking, cybersecurity and technical support services.
+    </p>
+
+</section>
+
+<section id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <h3>IT Infrastructure</h3>
+            <p>
+                Server, storage and infrastructure solutions.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>Networking</h3>
+            <p>
+                LAN, WAN, firewall and network solutions.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>Cyber Security</h3>
+            <p>
+                Firewall, endpoint and security solutions.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: sales@ttribe.co.in</p>
+
+    <p>Phone: +91 9990641506</p>
+
+</section>
+
+<footer>
+
+    © 2026 Tech Tribe Infoways. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
