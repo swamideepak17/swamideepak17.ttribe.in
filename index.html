@@ -61,8 +61,6 @@
         }
 
 
-        /* Logo background */
-
         .logo-container {
 
             background: #ffffff;
@@ -150,8 +148,6 @@
         }
 
 
-        /* Decorative background */
-
         .hero::before {
 
             content: "";
@@ -213,7 +209,7 @@
 
 
         /* =====================================================
-           HERO LEFT SIDE
+           HERO LEFT
         ===================================================== */
 
         .hero-content {
@@ -284,10 +280,6 @@
         }
 
 
-        /* =====================================================
-           SERVICE TAGS
-        ===================================================== */
-
         .hero-services {
 
             display: flex;
@@ -357,7 +349,7 @@
 
 
         /* =====================================================
-           WORKING HOURS CARD
+           WORKING HOURS
         ===================================================== */
 
         .working-hours {
@@ -433,10 +425,6 @@
         }
 
 
-        /* =====================================================
-           HOURS ROWS
-        ===================================================== */
-
         .hours-row {
 
             display: flex;
@@ -471,7 +459,6 @@
 
             color: #123456;
         }
-
 
 
         /* =====================================================
@@ -573,7 +560,7 @@
 
 
         /* =====================================================
-           SERVICES
+           SERVICES SECTION
         ===================================================== */
 
         #services {
@@ -582,29 +569,90 @@
         }
 
 
-        .services {
+        .services-intro {
 
-            display: flex;
+            max-width: 750px;
 
-            gap: 25px;
+            color: #607789;
 
-            flex-wrap: wrap;
+            margin-bottom: 45px;
         }
 
 
-        .service {
+        /* =====================================================
+           SERVICE CATEGORY
+        ===================================================== */
 
-            flex: 1;
+        .service-category {
 
-            min-width: 220px;
+            margin-bottom: 45px;
+        }
 
-            padding: 30px;
+
+        .category-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+
+            color: #123456;
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+
+        .category-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #e8f6ff;
+
+            font-size: 23px;
+        }
+
+
+        /* =====================================================
+           SERVICE CARDS
+        ===================================================== */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .service-card {
+
+            background: #ffffff;
 
             border: 1px solid #dce7ef;
 
             border-radius: 12px;
 
-            background: #ffffff;
+            padding: 25px;
+
+            min-height: 150px;
 
             transition: 0.3s;
 
@@ -613,20 +661,44 @@
         }
 
 
-        .service:hover {
+        .service-card:hover {
 
             transform: translateY(-5px);
 
+            border-color: #b8d8eb;
+
             box-shadow:
                 0 12px 30px rgba(0,0,0,0.09);
-
-            border-color: #b8d8eb;
         }
 
 
-        .service h3 {
+        .service-card-icon {
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .service-card h3 {
+
+            margin: 0 0 8px 0;
 
             color: #123456;
+
+            font-size: 18px;
+        }
+
+
+        .service-card p {
+
+            margin: 0;
+
+            color: #718391;
+
+            font-size: 14px;
+
+            line-height: 1.5;
         }
 
 
@@ -684,7 +756,23 @@
 
 
         /* =====================================================
-           MOBILE
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .services-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           HERO RESPONSIVE
         ===================================================== */
 
         @media (max-width: 900px) {
@@ -725,8 +813,14 @@
 
                 margin: auto;
             }
+
         }
 
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
         @media (max-width: 768px) {
 
@@ -785,6 +879,18 @@
             section:not(.hero) {
 
                 padding: 50px 7%;
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .category-title {
+
+                font-size: 20px;
             }
 
         }
@@ -853,7 +959,7 @@
     <div class="hero-container">
 
 
-        <!-- LEFT SIDE -->
+        <!-- LEFT -->
 
         <div class="hero-content">
 
@@ -917,7 +1023,7 @@
 
 
 
-        <!-- RIGHT SIDE - WORKING HOURS -->
+        <!-- RIGHT - WORKING HOURS -->
 
         <div class="working-hours">
 
@@ -1069,63 +1175,348 @@
     </h2>
 
 
-    <div class="services">
+    <p class="services-intro">
 
+        We provide comprehensive IT hardware, software,
+        networking, cybersecurity and maintenance solutions
+        to support your business operations.
 
-        <div class="service">
-
-
-            <h3>
-                IT Infrastructure
-            </h3>
-
-
-            <p>
-
-                Server, storage and infrastructure
-                solutions for reliable business operations.
-
-            </p>
-
-
-        </div>
+    </p>
 
 
 
-        <div class="service">
+    <!-- =================================================
+         CATEGORY 1 - HARDWARE
+    ================================================== -->
+
+    <div class="service-category">
 
 
-            <h3>
-                Networking
-            </h3>
+        <div class="category-title">
 
 
-            <p>
+            <div class="category-icon">
 
-                LAN, WAN, firewall and network
-                solutions for secure connectivity.
+                💻
 
-            </p>
+            </div>
+
+
+            Hardware &amp; IT Support
 
 
         </div>
 
 
 
-        <div class="service">
+        <div class="services-grid">
 
 
-            <h3>
-                Cyber Security
-            </h3>
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Laptop
+                </h3>
+
+                <p>
+                    Laptop sales, installation,
+                    troubleshooting and support.
+                </p>
+
+            </div>
 
 
-            <p>
 
-                Firewall, endpoint and security
-                solutions to protect your business.
+            <div class="service-card">
 
-            </p>
+                <div class="service-card-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    Desktop
+                </h3>
+
+                <p>
+                    Desktop configuration,
+                    upgrades, repair and support.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    🖨️
+                </div>
+
+                <h3>
+                    Printers
+                </h3>
+
+                <p>
+                    Printer installation, configuration,
+                    repair and troubleshooting.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    🔋
+                </div>
+
+                <h3>
+                    UPS
+                </h3>
+
+                <p>
+                    UPS installation, maintenance
+                    and power backup solutions.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CATEGORY 2 - NETWORK & SECURITY
+    ================================================== -->
+
+    <div class="service-category">
+
+
+        <div class="category-title">
+
+
+            <div class="category-icon">
+
+                🛡️
+
+            </div>
+
+
+            Network &amp; Security
+
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    🔥
+                </div>
+
+                <h3>
+                    Firewall
+                </h3>
+
+                <p>
+                    Firewall installation, configuration,
+                    monitoring and security management.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Antivirus
+                </h3>
+
+                <p>
+                    Endpoint security, antivirus
+                    installation and protection.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CATEGORY 3 - SOFTWARE
+    ================================================== -->
+
+    <div class="service-category">
+
+
+        <div class="category-title">
+
+
+            <div class="category-icon">
+
+                ⚙️
+
+            </div>
+
+
+            Software &amp; Business Solutions
+
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Tally Prime
+                </h3>
+
+                <p>
+                    Tally Prime installation,
+                    configuration and technical support.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    ☁️
+                </div>
+
+                <h3>
+                    Microsoft 365
+                </h3>
+
+                <p>
+                    Microsoft 365 setup, configuration,
+                    administration and user support.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CATEGORY 4 - AMC
+    ================================================== -->
+
+    <div class="service-category">
+
+
+        <div class="category-title">
+
+
+            <div class="category-icon">
+
+                🔧
+
+            </div>
+
+
+            AMC &amp; Maintenance Services
+
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Laptop AMC
+                </h3>
+
+                <p>
+                    Annual maintenance and preventive
+                    support for laptops.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    Desktop AMC
+                </h3>
+
+                <p>
+                    Annual maintenance and preventive
+                    support for desktop systems.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-card-icon">
+                    🖨️
+                </div>
+
+                <h3>
+                    Printer AMC
+                </h3>
+
+                <p>
+                    Annual maintenance and preventive
+                    support for printers.
+                </p>
+
+            </div>
 
 
         </div>
@@ -1303,7 +1694,7 @@ function updateBusinessStatus() {
 
 
     /*
-     * Business hours
+     * Business hours:
      *
      * Monday-Saturday
      * 9:30 AM - 6:30 PM
@@ -1336,7 +1727,7 @@ function updateBusinessStatus() {
 
 
     /*
-     * India time
+     * Display India time
      */
 
     const displayTime =
