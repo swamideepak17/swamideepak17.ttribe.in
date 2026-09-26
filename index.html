@@ -40,7 +40,6 @@
             color: white;
             text-decoration: none;
             margin-left: 25px;
-            font-weight: 500;
         }
 
         nav a:hover {
@@ -83,15 +82,11 @@
 
 
         /* =========================
-           GENERAL SECTIONS
+           SECTIONS
         ========================= */
 
         section {
             padding: 60px 10%;
-        }
-
-        section h2 {
-            margin-bottom: 25px;
         }
 
 
@@ -120,115 +115,11 @@
 
 
         /* =========================
-           WORKING HOURS
-        ========================= */
-
-        #working-hours {
-            background: #f2f5f8;
-        }
-
-        .working-hours-container {
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .status-box {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.10);
-        }
-
-        .status-icon {
-            font-size: 45px;
-            margin-bottom: 10px;
-        }
-
-        .status-text {
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .status-message {
-            font-size: 17px;
-            color: #555;
-            margin-bottom: 12px;
-        }
-
-        .current-time {
-            font-size: 15px;
-            color: #333;
-            font-weight: bold;
-        }
-
-        /* OPEN */
-
-        .open {
-            color: #15803d;
-        }
-
-        /* CLOSED */
-
-        .closed {
-            color: #dc2626;
-        }
-
-        /* LUNCH */
-
-        .lunch {
-            color: #d97706;
-        }
-
-
-        /* =========================
-           HOURS TABLE
-        ========================= */
-
-        .hours-table {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-
-        .hours-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 17px 25px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .hours-row:last-child {
-            border-bottom: none;
-        }
-
-        .hours-day {
-            font-weight: bold;
-        }
-
-        .hours-time {
-            color: #555;
-        }
-
-        .closed-day {
-            color: #dc2626;
-            font-weight: bold;
-        }
-
-        .lunch-row {
-            background: #fff8e1;
-        }
-
-
-        /* =========================
            CONTACT
         ========================= */
 
         #contact {
-            background: white;
+            background: #f2f5f8;
         }
 
         .contact-info {
@@ -238,6 +129,48 @@
         .contact-info a {
             color: #123456;
             text-decoration: none;
+        }
+
+
+        /* =========================
+           OPEN / CLOSED STATUS
+        ========================= */
+
+        .business-status {
+            margin-top: 25px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            max-width: 700px;
+        }
+
+        .status-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .status-message {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .current-time {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .open {
+            color: #15803d;
+        }
+
+        .closed {
+            color: #dc2626;
+        }
+
+        .lunch {
+            color: #d97706;
         }
 
 
@@ -291,11 +224,6 @@
                 padding: 45px 7%;
             }
 
-            .hours-row {
-                padding: 15px;
-                font-size: 14px;
-            }
-
         }
 
     </style>
@@ -323,8 +251,6 @@
         <a href="#about">About</a>
 
         <a href="#services">Services</a>
-
-        <a href="#working-hours">Working Hours</a>
 
         <a href="#contact">Contact</a>
 
@@ -363,10 +289,8 @@
     <h2>About Us</h2>
 
     <p>
-
         Tech Tribe Infoways provides professional IT infrastructure,
         networking, cybersecurity and technical support services.
-
     </p>
 
 </section>
@@ -424,158 +348,6 @@
 
 
 <!-- =========================
-     WORKING HOURS
-========================= -->
-
-<section id="working-hours">
-
-    <div class="working-hours-container">
-
-        <h2>Working Hours</h2>
-
-
-        <!-- CURRENT STATUS -->
-
-        <div class="status-box">
-
-            <div id="statusIcon" class="status-icon">
-                ⏳
-            </div>
-
-            <div id="statusText" class="status-text">
-                Checking Status...
-            </div>
-
-            <div id="statusMessage" class="status-message">
-                Please wait...
-            </div>
-
-            <div id="currentTime" class="current-time">
-                India Time: --
-            </div>
-
-        </div>
-
-
-
-        <!-- WORKING HOURS TABLE -->
-
-        <div class="hours-table">
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Monday
-                </span>
-
-                <span class="hours-time">
-                    9:30 AM – 6:30 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Tuesday
-                </span>
-
-                <span class="hours-time">
-                    9:30 AM – 6:30 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Wednesday
-                </span>
-
-                <span class="hours-time">
-                    9:30 AM – 6:30 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Thursday
-                </span>
-
-                <span class="hours-time">
-                    9:30 AM – 6:30 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Friday
-                </span>
-
-                <span class="hours-time">
-                    9:30 AM – 6:30 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Saturday
-                </span>
-
-                <span class="hours-time">
-                    9:30 AM – 6:30 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row lunch-row">
-
-                <span class="hours-day">
-                    🍴 Lunch Break
-                </span>
-
-                <span class="hours-time">
-                    1:00 PM – 2:00 PM
-                </span>
-
-            </div>
-
-
-            <div class="hours-row">
-
-                <span class="hours-day">
-                    Sunday
-                </span>
-
-                <span class="closed-day">
-                    Closed
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
      CONTACT
 ========================= -->
 
@@ -599,20 +371,53 @@
             </a>
         </p>
 
-        <p>
-            🕒 Working Hours:
-            Monday – Saturday, 9:30 AM – 6:30 PM
-        </p>
 
-        <p>
-            🍴 Lunch:
-            1:00 PM – 2:00 PM
-        </p>
+        <!-- =========================
+             WORKING HOURS + STATUS
+             INCLUDED IN CONTACT
+        ========================= -->
 
-        <p>
-            🚫 Sunday:
-            Closed
-        </p>
+        <div class="business-status">
+
+            <div id="statusTitle"
+                 class="status-title">
+
+                ⏳ Checking Status...
+
+            </div>
+
+            <div id="statusMessage"
+                 class="status-message">
+
+                Please wait...
+
+            </div>
+
+            <div id="currentTime"
+                 class="current-time">
+
+                India Time: --
+
+            </div>
+
+            <hr>
+
+            <p>
+                🕒 <strong>Working Hours:</strong>
+                Monday – Saturday: 9:30 AM – 6:30 PM
+            </p>
+
+            <p>
+                🍴 <strong>Lunch:</strong>
+                1:00 PM – 2:00 PM
+            </p>
+
+            <p>
+                🚫 <strong>Sunday:</strong>
+                Closed
+            </p>
+
+        </div>
 
     </div>
 
@@ -641,10 +446,8 @@
 function updateBusinessStatus() {
 
     /*
-     * Get current date/time.
-     *
-     * The website always uses
-     * India Standard Time (IST).
+     * Current time using
+     * India Standard Time.
      */
 
     const now = new Date();
@@ -692,7 +495,7 @@ function updateBusinessStatus() {
 
     /*
      * Convert 12-hour time
-     * into 24-hour time.
+     * to 24-hour time.
      */
 
     if (dayPeriod === "pm" && hour !== 12) {
@@ -709,7 +512,7 @@ function updateBusinessStatus() {
 
 
     /*
-     * Working hours
+     * Business hours
      */
 
     const openingTime =
@@ -729,11 +532,8 @@ function updateBusinessStatus() {
      * HTML elements
      */
 
-    const statusIcon =
-        document.getElementById("statusIcon");
-
-    const statusText =
-        document.getElementById("statusText");
+    const statusTitle =
+        document.getElementById("statusTitle");
 
     const statusMessage =
         document.getElementById("statusMessage");
@@ -743,7 +543,7 @@ function updateBusinessStatus() {
 
 
     /*
-     * Display current Indian time
+     * Current Indian time
      */
 
     const displayTime =
@@ -765,10 +565,10 @@ function updateBusinessStatus() {
 
 
     /*
-     * Remove previous status classes
+     * Remove previous status classes.
      */
 
-    statusText.classList.remove(
+    statusTitle.classList.remove(
         "open",
         "closed",
         "lunch"
@@ -781,12 +581,10 @@ function updateBusinessStatus() {
 
     if (weekday === "Sunday") {
 
-        statusIcon.innerHTML = "🔴";
+        statusTitle.innerHTML =
+            "🔴 CLOSED NOW";
 
-        statusText.innerHTML =
-            "CLOSED NOW";
-
-        statusText.classList.add(
+        statusTitle.classList.add(
             "closed"
         );
 
@@ -803,17 +601,15 @@ function updateBusinessStatus() {
 
     if (currentMinutes < openingTime) {
 
-        statusIcon.innerHTML = "🔴";
+        statusTitle.innerHTML =
+            "🔴 CLOSED NOW";
 
-        statusText.innerHTML =
-            "CLOSED NOW";
-
-        statusText.classList.add(
+        statusTitle.classList.add(
             "closed"
         );
 
         statusMessage.innerHTML =
-            "We are currently closed. Opening time is 9:30 AM.";
+            "We are currently closed. We will open at 9:30 AM.";
 
         return;
     }
@@ -828,12 +624,10 @@ function updateBusinessStatus() {
         currentMinutes < lunchEnd
     ) {
 
-        statusIcon.innerHTML = "🍴";
+        statusTitle.innerHTML =
+            "🍴 LUNCH BREAK";
 
-        statusText.innerHTML =
-            "LUNCH BREAK";
-
-        statusText.classList.add(
+        statusTitle.classList.add(
             "lunch"
         );
 
@@ -850,12 +644,10 @@ function updateBusinessStatus() {
 
     if (currentMinutes >= closingTime) {
 
-        statusIcon.innerHTML = "🔴";
+        statusTitle.innerHTML =
+            "🔴 CLOSED NOW";
 
-        statusText.innerHTML =
-            "CLOSED NOW";
-
-        statusText.classList.add(
+        statusTitle.classList.add(
             "closed"
         );
 
@@ -870,12 +662,10 @@ function updateBusinessStatus() {
      * OPEN
      */
 
-    statusIcon.innerHTML = "🟢";
+    statusTitle.innerHTML =
+        "🟢 OPEN NOW";
 
-    statusText.innerHTML =
-        "OPEN NOW";
-
-    statusText.classList.add(
+    statusTitle.classList.add(
         "open"
     );
 
@@ -886,14 +676,14 @@ function updateBusinessStatus() {
 
 
 /*
- * Run immediately
+ * Run immediately.
  */
 
 updateBusinessStatus();
 
 
 /*
- * Update every second
+ * Update every second.
  */
 
 setInterval(
