@@ -82,7 +82,65 @@
 
 
         /* =========================
-           SECTIONS
+           WORKING HOURS
+        ========================= */
+
+        .working-hours {
+            margin: 30px auto 10px auto;
+            max-width: 650px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+        }
+
+        .working-hours-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .working-hours p {
+            margin: 7px 0;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           OPEN / CLOSED STATUS
+        ========================= */
+
+        .business-status {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .status-message {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #555;
+        }
+
+        .current-time {
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: normal;
+            color: #777;
+        }
+
+        .open {
+            color: #15803d;
+        }
+
+        .closed {
+            color: #dc2626;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
         ========================= */
 
         section {
@@ -129,48 +187,6 @@
         .contact-info a {
             color: #123456;
             text-decoration: none;
-        }
-
-
-        /* =========================
-           OPEN / CLOSED STATUS
-        ========================= */
-
-        .business-status {
-            margin-top: 25px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            max-width: 700px;
-        }
-
-        .status-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .status-message {
-            color: #555;
-            margin-bottom: 8px;
-        }
-
-        .current-time {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .open {
-            color: #15803d;
-        }
-
-        .closed {
-            color: #dc2626;
-        }
-
-        .lunch {
-            color: #d97706;
         }
 
 
@@ -224,6 +240,10 @@
                 padding: 45px 7%;
             }
 
+            .working-hours {
+                padding: 18px;
+            }
+
         }
 
     </style>
@@ -271,6 +291,52 @@
     <p>
         Reliable IT Infrastructure, Networking and Cyber Security Services
     </p>
+
+
+    <!-- WORKING HOURS -->
+
+    <div class="working-hours">
+
+        <div class="working-hours-title">
+            🕒 Working Hours
+        </div>
+
+        <p>
+            <strong>Monday – Saturday:</strong>
+            9:30 AM – 6:30 PM
+        </p>
+
+        <p>
+            <strong>Sunday:</strong>
+            Closed
+        </p>
+
+
+        <!-- OPEN / CLOSED -->
+
+        <div id="businessStatus"
+             class="business-status">
+
+            Checking Status...
+
+        </div>
+
+        <div id="statusMessage"
+             class="status-message">
+
+            Please wait...
+
+        </div>
+
+        <div id="currentTime"
+             class="current-time">
+
+            India Time: --
+
+        </div>
+
+    </div>
+
 
     <a class="button" href="#contact">
         Contact Us
@@ -371,54 +437,6 @@
             </a>
         </p>
 
-
-        <!-- =========================
-             WORKING HOURS + STATUS
-             INCLUDED IN CONTACT
-        ========================= -->
-
-        <div class="business-status">
-
-            <div id="statusTitle"
-                 class="status-title">
-
-                ⏳ Checking Status...
-
-            </div>
-
-            <div id="statusMessage"
-                 class="status-message">
-
-                Please wait...
-
-            </div>
-
-            <div id="currentTime"
-                 class="current-time">
-
-                India Time: --
-
-            </div>
-
-            <hr>
-
-            <p>
-                🕒 <strong>Working Hours:</strong>
-                Monday – Saturday: 9:30 AM – 6:30 PM
-            </p>
-
-            <p>
-                🍴 <strong>Lunch:</strong>
-                1:00 PM – 2:00 PM
-            </p>
-
-            <p>
-                🚫 <strong>Sunday:</strong>
-                Closed
-            </p>
-
-        </div>
-
     </div>
 
 </section>
@@ -446,8 +464,8 @@
 function updateBusinessStatus() {
 
     /*
-     * Current time using
-     * India Standard Time.
+     * Get current date/time
+     * using India Standard Time.
      */
 
     const now = new Date();
@@ -512,38 +530,41 @@ function updateBusinessStatus() {
 
 
     /*
-     * Business hours
+     * Working hours:
+     *
+     * Monday-Saturday
+     * 9:30 AM - 6:30 PM
      */
 
     const openingTime =
         (9 * 60) + 30;
-
-    const lunchStart =
-        13 * 60;
-
-    const lunchEnd =
-        14 * 60;
 
     const closingTime =
         (18 * 60) + 30;
 
 
     /*
-     * HTML elements
+     * Get HTML elements.
      */
 
-    const statusTitle =
-        document.getElementById("statusTitle");
+    const businessStatus =
+        document.getElementById(
+            "businessStatus"
+        );
 
     const statusMessage =
-        document.getElementById("statusMessage");
+        document.getElementById(
+            "statusMessage"
+        );
 
     const currentTime =
-        document.getElementById("currentTime");
+        document.getElementById(
+            "currentTime"
+        );
 
 
     /*
-     * Current Indian time
+     * Display current India time.
      */
 
     const displayTime =
@@ -565,13 +586,12 @@ function updateBusinessStatus() {
 
 
     /*
-     * Remove previous status classes.
+     * Remove old status classes.
      */
 
-    statusTitle.classList.remove(
+    businessStatus.classList.remove(
         "open",
-        "closed",
-        "lunch"
+        "closed"
     );
 
 
@@ -581,30 +601,30 @@ function updateBusinessStatus() {
 
     if (weekday === "Sunday") {
 
-        statusTitle.innerHTML =
+        businessStatus.innerHTML =
             "🔴 CLOSED NOW";
 
-        statusTitle.classList.add(
+        businessStatus.classList.add(
             "closed"
         );
 
         statusMessage.innerHTML =
-            "We are closed on Sunday. We will be open Monday at 9:30 AM.";
+            "We are closed today. We will open Monday at 9:30 AM.";
 
         return;
     }
 
 
     /*
-     * BEFORE OPENING
+     * BEFORE 9:30 AM
      */
 
     if (currentMinutes < openingTime) {
 
-        statusTitle.innerHTML =
+        businessStatus.innerHTML =
             "🔴 CLOSED NOW";
 
-        statusTitle.classList.add(
+        businessStatus.classList.add(
             "closed"
         );
 
@@ -616,43 +636,20 @@ function updateBusinessStatus() {
 
 
     /*
-     * LUNCH BREAK
-     */
-
-    if (
-        currentMinutes >= lunchStart &&
-        currentMinutes < lunchEnd
-    ) {
-
-        statusTitle.innerHTML =
-            "🍴 LUNCH BREAK";
-
-        statusTitle.classList.add(
-            "lunch"
-        );
-
-        statusMessage.innerHTML =
-            "We are temporarily closed for lunch. Business resumes at 2:00 PM.";
-
-        return;
-    }
-
-
-    /*
-     * AFTER CLOSING
+     * AFTER 6:30 PM
      */
 
     if (currentMinutes >= closingTime) {
 
-        statusTitle.innerHTML =
+        businessStatus.innerHTML =
             "🔴 CLOSED NOW";
 
-        statusTitle.classList.add(
+        businessStatus.classList.add(
             "closed"
         );
 
         statusMessage.innerHTML =
-            "We are closed for today. Working hours are 9:30 AM to 6:30 PM.";
+            "We are closed for today. Working hours are 9:30 AM – 6:30 PM.";
 
         return;
     }
@@ -662,28 +659,28 @@ function updateBusinessStatus() {
      * OPEN
      */
 
-    statusTitle.innerHTML =
+    businessStatus.innerHTML =
         "🟢 OPEN NOW";
 
-    statusTitle.classList.add(
+    businessStatus.classList.add(
         "open"
     );
 
     statusMessage.innerHTML =
-        "We are currently open. Our working hours are 9:30 AM to 6:30 PM.";
+        "We are currently open.";
 
 }
 
 
 /*
- * Run immediately.
+ * Run status immediately.
  */
 
 updateBusinessStatus();
 
 
 /*
- * Update every second.
+ * Update status every second.
  */
 
 setInterval(
