@@ -13,62 +13,166 @@
 
     <style>
 
-        /* =========================
+        /* =====================================================
            GENERAL
-        ========================= */
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             color: #222;
+            background: #ffffff;
         }
 
 
-        /* =========================
+        /* =====================================================
            HEADER
-        ========================= */
+        ===================================================== */
 
         header {
-            background: #123456;
+
+            background: #0b1f3a;
+
             color: white;
 
-            padding: 20px 50px;
+            padding: 18px 6%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
+            position: relative;
+
+            z-index: 10;
+
         }
+
 
         header img {
+
             max-width: 180px;
+
             height: auto;
+
         }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
 
         nav a {
+
             color: white;
+
             text-decoration: none;
 
-            margin-left: 25px;
+            margin-left: 30px;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+
         }
+
 
         nav a:hover {
-            text-decoration: underline;
+
+            color: #5ee7ff;
+
         }
 
 
-        /* =========================
-           HERO
-        ========================= */
+
+        /* =====================================================
+           MODERN HERO
+        ===================================================== */
 
         .hero {
-            background: #f2f5f8;
 
-            padding: 100px 8%;
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071a33 0%,
+                    #0b315b 55%,
+                    #104a78 100%
+                );
+
+            color: white;
+
+            padding: 95px 7%;
+
         }
+
+
+        /* Decorative circles */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+
+            height: 420px;
+
+            border-radius: 50%;
+
+            background: rgba(0, 210, 255, 0.08);
+
+            top: -180px;
+
+            right: -100px;
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+
+            height: 300px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            bottom: -160px;
+
+            left: -100px;
+
+        }
+
 
         .hero-container {
 
-            max-width: 1200px;
+            max-width: 1250px;
 
             margin: auto;
 
@@ -78,167 +182,388 @@
 
             justify-content: space-between;
 
-            gap: 60px;
+            gap: 70px;
+
+            position: relative;
+
+            z-index: 2;
+
         }
 
 
-        /* LEFT SIDE */
+
+        /* =====================================================
+           LEFT HERO CONTENT
+        ===================================================== */
 
         .hero-content {
 
             flex: 1;
 
             text-align: left;
-        }
 
-        .hero h2 {
-
-            font-size: 45px;
-
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-
-            font-size: 20px;
-
-            line-height: 1.6;
         }
 
 
-        /* CONTACT BUTTON */
+        .hero-tag {
+
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            background: rgba(255,255,255,0.08);
+
+            border-radius: 30px;
+
+            font-size: 13px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 22px;
+
+            color: #bcefff;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 58px;
+
+            line-height: 1.1;
+
+            margin: 0 0 20px 0;
+
+            font-weight: 700;
+
+            letter-spacing: -1px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: #5ee7ff;
+
+        }
+
+
+        .hero-description {
+
+            font-size: 19px;
+
+            line-height: 1.7;
+
+            color: #d8e9f5;
+
+            max-width: 650px;
+
+            margin-bottom: 28px;
+
+        }
+
+
+        .hero-services {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .hero-services span {
+
+            padding: 8px 13px;
+
+            background: rgba(255,255,255,0.09);
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            border-radius: 6px;
+
+            font-size: 13px;
+
+            color: #e9f8ff;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
 
         .button {
 
             display: inline-block;
 
-            background: #123456;
+            background: #5ee7ff;
 
-            color: white;
+            color: #06203b;
 
-            padding: 14px 25px;
+            padding: 14px 26px;
 
-            margin-top: 20px;
+            border-radius: 7px;
 
             text-decoration: none;
 
-            border-radius: 5px;
+            font-weight: bold;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.20);
+
         }
+
 
         .button:hover {
 
-            background: #1d5b8f;
+            background: white;
+
+            transform: translateY(-2px);
+
         }
 
 
-        /* =========================
-           WORKING HOURS
-        ========================= */
+
+        /* =====================================================
+           WORKING HOURS CARD
+        ===================================================== */
 
         .working-hours {
 
-            width: 330px;
+            width: 370px;
 
-            background: white;
+            flex-shrink: 0;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,0.11);
+
+            border: 1px solid rgba(255,255,255,0.22);
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.25);
+
+        }
+
+
+        .hours-header {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .clock-icon {
+
+            width: 48px;
+
+            height: 48px;
 
             border-radius: 12px;
 
-            padding: 25px;
+            display: flex;
 
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.12);
+            align-items: center;
 
-            text-align: left;
+            justify-content: center;
 
-            flex-shrink: 0;
+            background: rgba(94,231,255,0.15);
+
+            font-size: 25px;
+
         }
 
 
         .working-hours-title {
 
-            font-size: 22px;
+            font-size: 21px;
 
             font-weight: bold;
 
-            margin-bottom: 15px;
+            margin: 0;
 
-            color: #123456;
         }
 
 
-        .working-hours p {
+        .hours-subtitle {
 
-            margin: 10px 0;
+            font-size: 12px;
 
-            font-size: 16px;
+            color: #b9d5e6;
 
-            line-height: 1.5;
+            margin-top: 4px;
+
         }
 
 
-        /* =========================
-           OPEN / CLOSED STATUS
-        ========================= */
+        /* Hours rows */
 
-        .business-status {
+        .hours-row {
 
-            margin-top: 18px;
+            display: flex;
 
-            font-size: 19px;
+            justify-content: space-between;
 
-            font-weight: bold;
-        }
+            align-items: center;
 
+            padding: 14px 0;
 
-        .status-message {
-
-            margin-top: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
 
             font-size: 14px;
 
-            font-weight: normal;
-
-            color: #555;
         }
 
 
-        .current-time {
+        .hours-row:last-of-type {
 
-            margin-top: 10px;
+            border-bottom: none;
 
-            font-size: 13px;
+        }
 
-            font-weight: normal;
 
-            color: #777;
+        .hours-day {
+
+            color: #d7e8f3;
+
+        }
+
+
+        .hours-time {
+
+            font-weight: bold;
+
+            color: white;
+
+        }
+
+
+        /* =====================================================
+           BUSINESS STATUS
+        ===================================================== */
+
+        .business-status {
+
+            margin-top: 22px;
+
+            padding: 13px 16px;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            text-align: center;
+
+            background: rgba(255,255,255,0.08);
+
         }
 
 
         .open {
 
-            color: #15803d;
+            color: #66f29b;
+
+            border: 1px solid rgba(102,242,155,0.25);
+
         }
 
 
         .closed {
 
-            color: #dc2626;
+            color: #ff7c7c;
+
+            border: 1px solid rgba(255,124,124,0.25);
+
         }
 
 
-        /* =========================
+        .status-message {
+
+            margin-top: 12px;
+
+            font-size: 13px;
+
+            text-align: center;
+
+            color: #c5d9e6;
+
+            line-height: 1.5;
+
+        }
+
+
+        .current-time {
+
+            margin-top: 15px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9fc0d3;
+
+        }
+
+
+
+        /* =====================================================
            GENERAL SECTIONS
-        ========================= */
+        ===================================================== */
 
-        section {
+        section:not(.hero) {
 
-            padding: 60px 10%;
+            padding: 70px 10%;
+
         }
 
 
-        /* =========================
+        section h2 {
+
+            font-size: 32px;
+
+            color: #0b315b;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        section p {
+
+            line-height: 1.7;
+
+        }
+
+
+
+        /* =====================================================
            SERVICES
-        ========================= */
+        ===================================================== */
 
         .services {
 
@@ -247,6 +572,7 @@
             gap: 25px;
 
             flex-wrap: wrap;
+
         }
 
 
@@ -256,66 +582,135 @@
 
             min-width: 220px;
 
-            padding: 25px;
+            padding: 30px;
 
-            border: 1px solid #ddd;
+            border: 1px solid #e2e8ee;
 
-            border-radius: 10px;
+            border-radius: 12px;
 
             background: white;
+
+            transition: 0.3s;
+
         }
 
 
         .service:hover {
 
+            transform: translateY(-5px);
+
             box-shadow:
-                0 5px 15px rgba(0,0,0,0.10);
+                0 12px 30px rgba(0,0,0,0.08);
+
         }
 
 
-        /* =========================
+        .service h3 {
+
+            color: #0b315b;
+
+        }
+
+
+
+        /* =====================================================
            CONTACT
-        ========================= */
+        ===================================================== */
 
         #contact {
 
-            background: #f2f5f8;
+            background: #f3f7fa;
+
         }
 
 
         .contact-info {
 
-            line-height: 2;
+            line-height: 2.2;
+
         }
 
 
         .contact-info a {
 
-            color: #123456;
+            color: #0b4d7d;
 
             text-decoration: none;
+
         }
 
 
-        /* =========================
+
+        /* =====================================================
            FOOTER
-        ========================= */
+        ===================================================== */
 
         footer {
 
-            background: #123456;
+            background: #071a33;
 
-            color: white;
+            color: #c9d9e5;
 
             text-align: center;
 
             padding: 25px;
+
+            font-size: 14px;
+
         }
 
 
-        /* =========================
+
+        /* =====================================================
            MOBILE
-        ========================= */
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+
+            .hero-content {
+
+                text-align: center;
+
+            }
+
+
+            .hero-description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+
+            .hero-services {
+
+                justify-content: center;
+
+            }
+
+
+            .working-hours {
+
+                width: 100%;
+
+                max-width: 450px;
+
+                margin: auto;
+
+            }
+
+        }
+
 
         @media (max-width: 768px) {
 
@@ -326,75 +721,66 @@
                 flex-direction: column;
 
                 gap: 15px;
+
             }
 
 
             nav {
 
-                text-align: center;
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px;
+
             }
 
 
             nav a {
 
-                margin-left: 8px;
-
-                margin-right: 8px;
+                margin: 0 8px;
 
                 font-size: 14px;
+
             }
 
 
             .hero {
 
                 padding: 70px 20px;
+
             }
 
 
-            .hero-container {
+            .hero h1 {
 
-                flex-direction: column;
+                font-size: 40px;
 
-                text-align: center;
-
-                gap: 35px;
             }
 
 
-            .hero-content {
-
-                text-align: center;
-            }
-
-
-            .hero h2 {
-
-                font-size: 34px;
-            }
-
-
-            .hero p {
+            .hero-description {
 
                 font-size: 17px;
+
             }
 
 
             .working-hours {
 
-                width: 100%;
+                padding: 25px;
 
-                max-width: 350px;
-
-                box-sizing: border-box;
             }
 
 
-            section {
+            section:not(.hero) {
 
-                padding: 45px 7%;
+                padding: 50px 7%;
+
             }
 
         }
+
 
     </style>
 
@@ -404,11 +790,12 @@
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
+
 
     <img
         src="logo.png"
@@ -437,13 +824,14 @@
 
     </nav>
 
+
 </header>
 
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section
     class="hero"
@@ -454,29 +842,65 @@
     <div class="hero-container">
 
 
-        <!-- =====================
+        <!-- =================================================
              LEFT SIDE
-        ====================== -->
+        ================================================== -->
 
         <div class="hero-content">
 
 
-            <h2>
-                Professional IT Solutions
-            </h2>
+            <div class="hero-tag">
+
+                IT INFRASTRUCTURE &amp; TECHNOLOGY SOLUTIONS
+
+            </div>
 
 
-            <p>
-                Reliable IT Infrastructure,
-                Networking and Cyber Security Services
+            <h1>
+
+                Professional
+                <span>IT Solutions</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Reliable IT Infrastructure, Networking and
+                Cyber Security Services designed to keep your
+                business secure, connected and productive.
+
             </p>
+
+
+            <div class="hero-services">
+
+                <span>
+                    IT Infrastructure
+                </span>
+
+                <span>
+                    Networking
+                </span>
+
+                <span>
+                    Cyber Security
+                </span>
+
+                <span>
+                    Technical Support
+                </span>
+
+            </div>
 
 
             <a
                 class="button"
                 href="#contact"
             >
-                Contact Us
+
+                Contact Us →
+
             </a>
 
 
@@ -484,48 +908,92 @@
 
 
 
-        <!-- =====================
-             RIGHT SIDE
-             WORKING HOURS
-        ====================== -->
+        <!-- =================================================
+             RIGHT SIDE - WORKING HOURS
+        ================================================== -->
 
         <div class="working-hours">
 
 
-            <div class="working-hours-title">
+            <div class="hours-header">
 
-                🕒 Working Hours
+
+                <div class="clock-icon">
+
+                    🕒
+
+                </div>
+
+
+                <div>
+
+                    <div class="working-hours-title">
+
+                        Working Hours
+
+                    </div>
+
+
+                    <div class="hours-subtitle">
+
+                        Our support &amp; service hours
+
+                    </div>
+
+                </div>
+
 
             </div>
 
 
-            <p>
 
-                <strong>
-                    Monday – Saturday:
-                </strong>
+            <!-- Monday - Saturday -->
 
-                <br>
-
-                9:30 AM – 6:30 PM
-
-            </p>
+            <div class="hours-row">
 
 
-            <p>
+                <span class="hours-day">
 
-                <strong>
-                    Sunday:
-                </strong>
+                    Monday – Saturday
 
-                <br>
-
-                Closed
-
-            </p>
+                </span>
 
 
-            <!-- OPEN / CLOSED -->
+                <span class="hours-time">
+
+                    9:30 AM – 6:30 PM
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- Sunday -->
+
+            <div class="hours-row">
+
+
+                <span class="hours-day">
+
+                    Sunday
+
+                </span>
+
+
+                <span class="hours-time">
+
+                    Closed
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- Dynamic Status -->
 
             <div
                 id="businessStatus"
@@ -552,7 +1020,7 @@
                 class="current-time"
             >
 
-                India Time: --
+                🇮🇳 India Time: --
 
             </div>
 
@@ -567,9 +1035,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
 <section id="about">
 
@@ -581,9 +1049,8 @@
 
     <p>
 
-        Tech Tribe Infoways provides
-        professional IT infrastructure,
-        networking, cybersecurity and
+        Tech Tribe Infoways provides professional IT
+        infrastructure, networking, cybersecurity and
         technical support services.
 
     </p>
@@ -593,9 +1060,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
      SERVICES
-========================= -->
+===================================================== -->
 
 <section id="services">
 
@@ -610,33 +1077,39 @@
 
         <div class="service">
 
+
             <h3>
                 IT Infrastructure
             </h3>
 
+
             <p>
 
-                Server, storage and
-                infrastructure solutions.
+                Server, storage and infrastructure
+                solutions for reliable business operations.
 
             </p>
+
 
         </div>
 
 
 
         <div class="service">
+
 
             <h3>
                 Networking
             </h3>
 
+
             <p>
 
-                LAN, WAN, firewall and
-                network solutions.
+                LAN, WAN, firewall and network
+                solutions for secure connectivity.
 
             </p>
+
 
         </div>
 
@@ -644,16 +1117,19 @@
 
         <div class="service">
 
+
             <h3>
                 Cyber Security
             </h3>
 
+
             <p>
 
-                Firewall, endpoint and
-                security solutions.
+                Firewall, endpoint and security
+                solutions to protect your business.
 
             </p>
+
 
         </div>
 
@@ -665,9 +1141,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section id="contact">
 
@@ -687,7 +1163,9 @@
             <a
                 href="mailto:sales@ttribe.co.in"
             >
+
                 sales@ttribe.co.in
+
             </a>
 
         </p>
@@ -700,7 +1178,9 @@
             <a
                 href="tel:+919990641506"
             >
+
                 +91 9990641506
+
             </a>
 
         </p>
@@ -713,9 +1193,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -726,9 +1206,9 @@
 
 
 
-<!-- =========================
-     OPEN / CLOSED JAVASCRIPT
-========================= -->
+<!-- =====================================================
+     OPEN / CLOSED STATUS
+===================================================== -->
 
 <script>
 
@@ -736,40 +1216,25 @@
 function updateBusinessStatus() {
 
 
-    /*
-     * Current date/time
-     */
-
     const now = new Date();
 
 
-
     /*
-     * Get India date/time
+     * Get current India time
      */
 
-    const parts = new Intl.DateTimeFormat(
-
-        "en-IN",
-
-        {
-
-            timeZone: "Asia/Kolkata",
-
-            weekday: "long",
-
-            hour: "2-digit",
-
-            minute: "2-digit",
-
-            second: "2-digit",
-
-            hour12: true
-
-        }
-
-    ).formatToParts(now);
-
+    const parts =
+        new Intl.DateTimeFormat(
+            "en-IN",
+            {
+                timeZone: "Asia/Kolkata",
+                weekday: "long",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: true
+            }
+        ).formatToParts(now);
 
 
     let weekday = "";
@@ -779,7 +1244,6 @@ function updateBusinessStatus() {
     let minute = 0;
 
     let dayPeriod = "";
-
 
 
     parts.forEach(function(part) {
@@ -813,14 +1277,11 @@ function updateBusinessStatus() {
 
         }
 
-
     });
 
 
-
     /*
-     * Convert 12-hour time
-     * to 24-hour time
+     * Convert 12-hour time to 24-hour time
      */
 
     if (
@@ -843,18 +1304,12 @@ function updateBusinessStatus() {
     }
 
 
-
-    /*
-     * Current time in minutes
-     */
-
     const currentMinutes =
         (hour * 60) + minute;
 
 
-
     /*
-     * Working hours
+     * Business hours
      *
      * Monday-Saturday
      * 9:30 AM - 6:30 PM
@@ -867,11 +1322,6 @@ function updateBusinessStatus() {
     const closingTime =
         (18 * 60) + 30;
 
-
-
-    /*
-     * HTML elements
-     */
 
     const businessStatus =
         document.getElementById(
@@ -891,34 +1341,22 @@ function updateBusinessStatus() {
         );
 
 
-
     /*
-     * Display India time
+     * Display current India time
      */
 
     const displayTime =
         new Intl.DateTimeFormat(
-
             "en-IN",
-
             {
-
                 timeZone: "Asia/Kolkata",
-
                 weekday: "long",
-
                 hour: "2-digit",
-
                 minute: "2-digit",
-
                 second: "2-digit",
-
                 hour12: true
-
             }
-
         ).format(now);
-
 
 
     currentTime.innerHTML =
@@ -926,9 +1364,8 @@ function updateBusinessStatus() {
         displayTime;
 
 
-
     /*
-     * Remove old status classes
+     * Remove previous classes
      */
 
     businessStatus.classList.remove(
@@ -937,9 +1374,8 @@ function updateBusinessStatus() {
     );
 
 
-
     /*
-     * SUNDAY
+     * Sunday
      */
 
     if (weekday === "Sunday") {
@@ -963,9 +1399,8 @@ function updateBusinessStatus() {
     }
 
 
-
     /*
-     * BEFORE 9:30 AM
+     * Before opening
      */
 
     if (currentMinutes < openingTime) {
@@ -989,9 +1424,8 @@ function updateBusinessStatus() {
     }
 
 
-
     /*
-     * AFTER 6:30 PM
+     * After closing
      */
 
     if (currentMinutes >= closingTime) {
@@ -1015,9 +1449,8 @@ function updateBusinessStatus() {
     }
 
 
-
     /*
-     * OPEN
+     * Currently Open
      */
 
     businessStatus.innerHTML =
@@ -1032,29 +1465,23 @@ function updateBusinessStatus() {
     statusMessage.innerHTML =
         "We are currently open.";
 
-
 }
 
 
-
 /*
- * Run immediately
+ * Start status
  */
 
 updateBusinessStatus();
 
 
-
 /*
- * Update every second
+ * Refresh every second
  */
 
 setInterval(
-
     updateBusinessStatus,
-
     1000
-
 );
 
 
