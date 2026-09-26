@@ -10,13 +10,19 @@
 
     <title>Tech Tribe Infoways</title>
 
+
     <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             color: #222;
         }
+
 
         /* =========================
            HEADER
@@ -25,7 +31,9 @@
         header {
             background: #123456;
             color: white;
+
             padding: 20px 50px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,6 +47,7 @@
         nav a {
             color: white;
             text-decoration: none;
+
             margin-left: 25px;
         }
 
@@ -53,30 +62,71 @@
 
         .hero {
             background: #f2f5f8;
-            text-align: center;
-            padding: 100px 20px;
+
+            padding: 100px 8%;
+        }
+
+        .hero-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+
+        /* LEFT SIDE */
+
+        .hero-content {
+
+            flex: 1;
+
+            text-align: left;
         }
 
         .hero h2 {
+
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
         .hero p {
+
             font-size: 20px;
+
+            line-height: 1.6;
         }
 
+
+        /* CONTACT BUTTON */
+
         .button {
+
             display: inline-block;
+
             background: #123456;
+
             color: white;
+
             padding: 14px 25px;
+
             margin-top: 20px;
+
             text-decoration: none;
+
             border-radius: 5px;
         }
 
         .button:hover {
+
             background: #1d5b8f;
         }
 
@@ -86,23 +136,43 @@
         ========================= */
 
         .working-hours {
-            margin: 30px auto 10px auto;
-            max-width: 650px;
+
+            width: 330px;
+
             background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+
+            border-radius: 12px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.12);
+
+            text-align: left;
+
+            flex-shrink: 0;
         }
+
 
         .working-hours-title {
-            font-size: 20px;
+
+            font-size: 22px;
+
             font-weight: bold;
-            margin-bottom: 12px;
+
+            margin-bottom: 15px;
+
+            color: #123456;
         }
 
+
         .working-hours p {
-            margin: 7px 0;
+
+            margin: 10px 0;
+
             font-size: 16px;
+
+            line-height: 1.5;
         }
 
 
@@ -111,30 +181,47 @@
         ========================= */
 
         .business-status {
-            margin-top: 15px;
-            font-size: 18px;
+
+            margin-top: 18px;
+
+            font-size: 19px;
+
             font-weight: bold;
         }
 
+
         .status-message {
+
             margin-top: 8px;
+
             font-size: 14px;
+
             font-weight: normal;
+
             color: #555;
         }
 
+
         .current-time {
-            margin-top: 8px;
+
+            margin-top: 10px;
+
             font-size: 13px;
+
             font-weight: normal;
+
             color: #777;
         }
 
+
         .open {
+
             color: #15803d;
         }
 
+
         .closed {
+
             color: #dc2626;
         }
 
@@ -144,6 +231,7 @@
         ========================= */
 
         section {
+
             padding: 60px 10%;
         }
 
@@ -153,22 +241,35 @@
         ========================= */
 
         .services {
+
             display: flex;
+
             gap: 25px;
+
             flex-wrap: wrap;
         }
 
+
         .service {
+
             flex: 1;
+
             min-width: 220px;
+
             padding: 25px;
+
             border: 1px solid #ddd;
+
             border-radius: 10px;
+
             background: white;
         }
 
+
         .service:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.10);
         }
 
 
@@ -177,15 +278,21 @@
         ========================= */
 
         #contact {
+
             background: #f2f5f8;
         }
 
+
         .contact-info {
+
             line-height: 2;
         }
 
+
         .contact-info a {
+
             color: #123456;
+
             text-decoration: none;
         }
 
@@ -195,9 +302,13 @@
         ========================= */
 
         footer {
+
             background: #123456;
+
             color: white;
+
             text-align: center;
+
             padding: 25px;
         }
 
@@ -209,39 +320,78 @@
         @media (max-width: 768px) {
 
             header {
+
                 padding: 15px 20px;
+
                 flex-direction: column;
+
                 gap: 15px;
             }
 
+
             nav {
+
                 text-align: center;
             }
 
+
             nav a {
+
                 margin-left: 8px;
+
                 margin-right: 8px;
+
                 font-size: 14px;
             }
 
+
             .hero {
+
                 padding: 70px 20px;
             }
 
+
+            .hero-container {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 35px;
+            }
+
+
+            .hero-content {
+
+                text-align: center;
+            }
+
+
             .hero h2 {
+
                 font-size: 34px;
             }
 
+
             .hero p {
+
                 font-size: 17px;
             }
 
-            section {
-                padding: 45px 7%;
-            }
 
             .working-hours {
-                padding: 18px;
+
+                width: 100%;
+
+                max-width: 350px;
+
+                box-sizing: border-box;
+            }
+
+
+            section {
+
+                padding: 45px 7%;
             }
 
         }
@@ -260,19 +410,30 @@
 
 <header>
 
-    <img src="logo.png"
-         alt="Tech Tribe Infoways"
-         width="180">
+    <img
+        src="logo.png"
+        alt="Tech Tribe Infoways"
+        width="180"
+    >
+
 
     <nav>
 
-        <a href="#home">Home</a>
+        <a href="#home">
+            Home
+        </a>
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#services">Services</a>
+        <a href="#services">
+            Services
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+            Contact
+        </a>
 
     </nav>
 
@@ -284,63 +445,123 @@
      HERO
 ========================= -->
 
-<section class="hero" id="home">
-
-    <h2>Professional IT Solutions</h2>
-
-    <p>
-        Reliable IT Infrastructure, Networking and Cyber Security Services
-    </p>
+<section
+    class="hero"
+    id="home"
+>
 
 
-    <!-- WORKING HOURS -->
-
-    <div class="working-hours">
-
-        <div class="working-hours-title">
-            🕒 Working Hours
-        </div>
-
-        <p>
-            <strong>Monday – Saturday:</strong>
-            9:30 AM – 6:30 PM
-        </p>
-
-        <p>
-            <strong>Sunday:</strong>
-            Closed
-        </p>
+    <div class="hero-container">
 
 
-        <!-- OPEN / CLOSED -->
+        <!-- =====================
+             LEFT SIDE
+        ====================== -->
 
-        <div id="businessStatus"
-             class="business-status">
+        <div class="hero-content">
 
-            Checking Status...
 
-        </div>
+            <h2>
+                Professional IT Solutions
+            </h2>
 
-        <div id="statusMessage"
-             class="status-message">
 
-            Please wait...
+            <p>
+                Reliable IT Infrastructure,
+                Networking and Cyber Security Services
+            </p>
+
+
+            <a
+                class="button"
+                href="#contact"
+            >
+                Contact Us
+            </a>
+
 
         </div>
 
-        <div id="currentTime"
-             class="current-time">
 
-            India Time: --
+
+        <!-- =====================
+             RIGHT SIDE
+             WORKING HOURS
+        ====================== -->
+
+        <div class="working-hours">
+
+
+            <div class="working-hours-title">
+
+                🕒 Working Hours
+
+            </div>
+
+
+            <p>
+
+                <strong>
+                    Monday – Saturday:
+                </strong>
+
+                <br>
+
+                9:30 AM – 6:30 PM
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Sunday:
+                </strong>
+
+                <br>
+
+                Closed
+
+            </p>
+
+
+            <!-- OPEN / CLOSED -->
+
+            <div
+                id="businessStatus"
+                class="business-status"
+            >
+
+                Checking Status...
+
+            </div>
+
+
+            <div
+                id="statusMessage"
+                class="status-message"
+            >
+
+                Please wait...
+
+            </div>
+
+
+            <div
+                id="currentTime"
+                class="current-time"
+            >
+
+                India Time: --
+
+            </div>
+
 
         </div>
+
 
     </div>
 
-
-    <a class="button" href="#contact">
-        Contact Us
-    </a>
 
 </section>
 
@@ -352,12 +573,21 @@
 
 <section id="about">
 
-    <h2>About Us</h2>
+
+    <h2>
+        About Us
+    </h2>
+
 
     <p>
-        Tech Tribe Infoways provides professional IT infrastructure,
-        networking, cybersecurity and technical support services.
+
+        Tech Tribe Infoways provides
+        professional IT infrastructure,
+        networking, cybersecurity and
+        technical support services.
+
     </p>
+
 
 </section>
 
@@ -369,45 +599,67 @@
 
 <section id="services">
 
-    <h2>Our Services</h2>
+
+    <h2>
+        Our Services
+    </h2>
+
 
     <div class="services">
 
 
         <div class="service">
 
-            <h3>IT Infrastructure</h3>
+            <h3>
+                IT Infrastructure
+            </h3>
 
             <p>
-                Server, storage and infrastructure solutions.
+
+                Server, storage and
+                infrastructure solutions.
+
             </p>
 
         </div>
 
 
+
         <div class="service">
 
-            <h3>Networking</h3>
+            <h3>
+                Networking
+            </h3>
 
             <p>
-                LAN, WAN, firewall and network solutions.
+
+                LAN, WAN, firewall and
+                network solutions.
+
             </p>
 
         </div>
 
 
+
         <div class="service">
 
-            <h3>Cyber Security</h3>
+            <h3>
+                Cyber Security
+            </h3>
 
             <p>
-                Firewall, endpoint and security solutions.
+
+                Firewall, endpoint and
+                security solutions.
+
             </p>
 
         </div>
 
 
     </div>
+
 
 </section>
 
@@ -419,25 +671,43 @@
 
 <section id="contact">
 
-    <h2>Contact Us</h2>
+
+    <h2>
+        Contact Us
+    </h2>
+
 
     <div class="contact-info">
 
+
         <p>
+
             📧 Email:
-            <a href="mailto:sales@ttribe.co.in">
+
+            <a
+                href="mailto:sales@ttribe.co.in"
+            >
                 sales@ttribe.co.in
             </a>
+
         </p>
+
 
         <p>
+
             📞 Phone:
-            <a href="tel:+919990641506">
+
+            <a
+                href="tel:+919990641506"
+            >
                 +91 9990641506
             </a>
+
         </p>
 
+
     </div>
+
 
 </section>
 
@@ -449,7 +719,8 @@
 
 <footer>
 
-    © 2026 Tech Tribe Infoways. All Rights Reserved.
+    © 2026 Tech Tribe Infoways.
+    All Rights Reserved.
 
 </footer>
 
@@ -461,76 +732,129 @@
 
 <script>
 
+
 function updateBusinessStatus() {
 
+
     /*
-     * Get current date/time
-     * using India Standard Time.
+     * Current date/time
      */
 
     const now = new Date();
 
 
+
+    /*
+     * Get India date/time
+     */
+
     const parts = new Intl.DateTimeFormat(
+
         "en-IN",
+
         {
+
             timeZone: "Asia/Kolkata",
+
             weekday: "long",
+
             hour: "2-digit",
+
             minute: "2-digit",
+
             second: "2-digit",
+
             hour12: true
+
         }
+
     ).formatToParts(now);
 
 
+
     let weekday = "";
+
     let hour = 0;
+
     let minute = 0;
+
     let dayPeriod = "";
+
 
 
     parts.forEach(function(part) {
 
+
         if (part.type === "weekday") {
+
             weekday = part.value;
+
         }
+
 
         if (part.type === "hour") {
+
             hour = parseInt(part.value);
+
         }
+
 
         if (part.type === "minute") {
+
             minute = parseInt(part.value);
+
         }
 
+
         if (part.type === "dayPeriod") {
-            dayPeriod = part.value.toLowerCase();
+
+            dayPeriod =
+                part.value.toLowerCase();
+
         }
+
 
     });
 
 
+
     /*
      * Convert 12-hour time
-     * to 24-hour time.
+     * to 24-hour time
      */
 
-    if (dayPeriod === "pm" && hour !== 12) {
+    if (
+        dayPeriod === "pm" &&
+        hour !== 12
+    ) {
+
         hour += 12;
+
     }
 
-    if (dayPeriod === "am" && hour === 12) {
+
+    if (
+        dayPeriod === "am" &&
+        hour === 12
+    ) {
+
         hour = 0;
+
     }
 
+
+
+    /*
+     * Current time in minutes
+     */
 
     const currentMinutes =
         (hour * 60) + minute;
 
 
+
     /*
-     * Working hours:
+     * Working hours
      *
      * Monday-Saturday
      * 9:30 AM - 6:30 PM
@@ -539,12 +863,14 @@ function updateBusinessStatus() {
     const openingTime =
         (9 * 60) + 30;
 
+
     const closingTime =
         (18 * 60) + 30;
 
 
+
     /*
-     * Get HTML elements.
+     * HTML elements
      */
 
     const businessStatus =
@@ -552,10 +878,12 @@ function updateBusinessStatus() {
             "businessStatus"
         );
 
+
     const statusMessage =
         document.getElementById(
             "statusMessage"
         );
+
 
     const currentTime =
         document.getElementById(
@@ -563,30 +891,44 @@ function updateBusinessStatus() {
         );
 
 
+
     /*
-     * Display current India time.
+     * Display India time
      */
 
     const displayTime =
         new Intl.DateTimeFormat(
+
             "en-IN",
+
             {
+
                 timeZone: "Asia/Kolkata",
+
                 weekday: "long",
+
                 hour: "2-digit",
+
                 minute: "2-digit",
+
                 second: "2-digit",
+
                 hour12: true
+
             }
+
         ).format(now);
 
 
+
     currentTime.innerHTML =
-        "🇮🇳 India Time: " + displayTime;
+        "🇮🇳 India Time: " +
+        displayTime;
+
 
 
     /*
-     * Remove old status classes.
+     * Remove old status classes
      */
 
     businessStatus.classList.remove(
@@ -595,24 +937,31 @@ function updateBusinessStatus() {
     );
 
 
+
     /*
      * SUNDAY
      */
 
     if (weekday === "Sunday") {
 
+
         businessStatus.innerHTML =
             "🔴 CLOSED NOW";
+
 
         businessStatus.classList.add(
             "closed"
         );
 
+
         statusMessage.innerHTML =
             "We are closed today. We will open Monday at 9:30 AM.";
 
+
         return;
+
     }
+
 
 
     /*
@@ -621,18 +970,24 @@ function updateBusinessStatus() {
 
     if (currentMinutes < openingTime) {
 
+
         businessStatus.innerHTML =
             "🔴 CLOSED NOW";
+
 
         businessStatus.classList.add(
             "closed"
         );
 
+
         statusMessage.innerHTML =
             "We are currently closed. We will open at 9:30 AM.";
 
+
         return;
+
     }
+
 
 
     /*
@@ -641,18 +996,24 @@ function updateBusinessStatus() {
 
     if (currentMinutes >= closingTime) {
 
+
         businessStatus.innerHTML =
             "🔴 CLOSED NOW";
+
 
         businessStatus.classList.add(
             "closed"
         );
 
+
         statusMessage.innerHTML =
             "We are closed for today. Working hours are 9:30 AM – 6:30 PM.";
 
+
         return;
+
     }
+
 
 
     /*
@@ -662,31 +1023,40 @@ function updateBusinessStatus() {
     businessStatus.innerHTML =
         "🟢 OPEN NOW";
 
+
     businessStatus.classList.add(
         "open"
     );
 
+
     statusMessage.innerHTML =
         "We are currently open.";
+
 
 }
 
 
+
 /*
- * Run status immediately.
+ * Run immediately
  */
 
 updateBusinessStatus();
 
 
+
 /*
- * Update status every second.
+ * Update every second
  */
 
 setInterval(
+
     updateBusinessStatus,
+
     1000
+
 );
+
 
 </script>
 
